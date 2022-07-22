@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="loginPane" stylesheets="@login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Label layoutX="104.0" layoutY="40.0" text="PASSWORD MANAGEMENT SYSTEM">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="105.0" text="LOGIN" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" startX="0.1955835495837479">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1825617253780365" green="0.04434697702527046" blue="0.7982456088066101" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <VBox layoutX="296.0" layoutY="143.0" prefHeight="131.0" prefWidth="279.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Username:" />
+                  <TextField fx:id="userName" promptText="username">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="299.0">
+               <children>
+                  <Label text="Password:" />
+                  <PasswordField fx:id="userPassword" promptText="password">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="0.0" prefWidth="279.0">
+               <children>
+                  <Hyperlink fx:id="forgotPassword" accessibleRole="BUTTON" layoutX="143.0" layoutY="-2.0" onAction="#redirectToForgotPassword" text="Forgot password?" textAlignment="RIGHT" textFill="#130cdd" />
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button id="loginBtn" fx:id="loginBtn" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="53.0" styleClass="loginBtn" stylesheets="@login.css" text="Login">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="signUpBtn" mnemonicParsing="false" onAction="#redirectSignUpPage" text="Sign Up" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

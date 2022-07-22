@@ -1,0 +1,8 @@
+.loginPane{
+	-fx-background-image: url('/image/login_background.jpg');
+	-fx-background-size: contain;
+	-fx-background-repeat: no-repeat;
+}
+.loginBtn{
+
+ 	}

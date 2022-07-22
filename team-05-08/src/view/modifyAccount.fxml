@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyAccountController">
+   <children>
+      <Label fx:id="accountName" text="ACCOUNT NAME">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="503.0">
+         <children>
+            <Label text="User name:     ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTxt" prefHeight="25.0" prefWidth="137.0" />
+            <Label fx:id="oldUsername" text="Label">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="503.0">
+         <children>
+            <Label text="Password:       ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="passwordTxt" prefHeight="25.0" prefWidth="139.0" promptText="password" />
+            <Label fx:id="oldPassword" text="Label">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="503.0">
+         <children>
+            <Label text="Expired date:  ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateTxt" prefHeight="25.0" prefWidth="137.0" />
+            <Label fx:id="oldExpiredDate" text="Label">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="41.0" prefWidth="517.0">
+         <children>
+            <Button fx:id="saveBtn" mnemonicParsing="false" text="Save" />
+            <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteAccount" text="Delete">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="backBtn" mnemonicParsing="false" text="Back" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
